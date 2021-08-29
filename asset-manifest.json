@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/spiceBlue_Task/static/css/main.04196fc4.chunk.css",
+    "main.js": "/spiceBlue_Task/static/js/main.6093f45f.chunk.js",
+    "main.js.map": "/spiceBlue_Task/static/js/main.6093f45f.chunk.js.map",
+    "runtime-main.js": "/spiceBlue_Task/static/js/runtime-main.a76dea53.js",
+    "runtime-main.js.map": "/spiceBlue_Task/static/js/runtime-main.a76dea53.js.map",
+    "static/js/2.99d73dc8.chunk.js": "/spiceBlue_Task/static/js/2.99d73dc8.chunk.js",
+    "static/js/2.99d73dc8.chunk.js.map": "/spiceBlue_Task/static/js/2.99d73dc8.chunk.js.map",
+    "static/js/3.e869e480.chunk.js": "/spiceBlue_Task/static/js/3.e869e480.chunk.js",
+    "static/js/3.e869e480.chunk.js.map": "/spiceBlue_Task/static/js/3.e869e480.chunk.js.map",
+    "index.html": "/spiceBlue_Task/index.html",
+    "static/css/main.04196fc4.chunk.css.map": "/spiceBlue_Task/static/css/main.04196fc4.chunk.css.map",
+    "static/js/2.99d73dc8.chunk.js.LICENSE.txt": "/spiceBlue_Task/static/js/2.99d73dc8.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a76dea53.js",
+    "static/js/2.99d73dc8.chunk.js",
+    "static/css/main.04196fc4.chunk.css",
+    "static/js/main.6093f45f.chunk.js"
+  ]
+}
