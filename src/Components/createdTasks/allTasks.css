@@ -1,0 +1,58 @@
+#allTasks{
+    border-left: 1px solid rgb(192, 190, 190);
+    border-right: 1px solid rgb(192, 190, 190);
+    position: relative;
+    max-height: 60vh;
+    overflow-y: auto;
+    overflow-x:initial;
+}
+#allTasks img{
+    width: 4vw;
+    height: 7vh;
+}
+.taskDetails{
+    display: flex;
+    align-items: center;
+    padding: 5%;
+    border-bottom: 1px solid rgb(192, 190, 190);
+}
+.date_description>div:first-child{
+    font-weight: bold;
+}
+.date_description>div:last-child{
+    color: red;
+    margin-top: 2%;
+}
+.taskDetails>div:last-child{
+    width: 3vw;
+    text-align: center;
+    position: absolute;
+    right: 3%;
+    cursor: pointer;
+}
+.editTaskToolTip{
+    visibility: hidden;
+    background-color: rgb(4, 63, 83);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5%;
+    width: 7vw;
+    position: absolute;
+    z-index: 1;
+    top: -2%;
+    right: 100%;
+}
+.editTaskToolTip::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent transparent rgb(4, 63, 83);
+  }
+.taskDetails>div:last-child:hover .editTaskToolTip{
+    visibility: visible;
+}

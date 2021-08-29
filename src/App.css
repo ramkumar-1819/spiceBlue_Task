@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family:'Abhaya Libre', serif;
+}
+#homePage{
+  display: flex;
+}
+.sideBar{
+  width: 15vw;
+  height: 100vh;
+  background-color:rgb(4, 63, 83);
+}
+.mainSection{
+  background-color: rgb(247, 247, 247);
+  width: 100%;
+}
+.topBar{
+  height: 5vh;
+  background-color: white;
+}
+/*styles for scrollbar*/
+::-webkit-scrollbar {
+  width: .5vw;
+}
+::-webkit-scrollbar-track {
+  background: #f1f1f1; 
+}
+::-webkit-scrollbar-thumb {
+  background: #888; 
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}

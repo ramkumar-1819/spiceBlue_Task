@@ -1,0 +1,118 @@
+.taskHeader{
+    height: 5vh;
+    display: flex;
+    justify-content: space-between;
+}
+#taskSection{
+    width: 30%;
+    margin: 5% 0 0 2%;
+}
+.taskHeader>div{
+    border: 1px solid rgb(192, 190, 190);
+    line-height: 5vh;
+}
+.taskHeader>div:first-child{
+    flex-grow: 1;
+    padding-left: 2%;
+}
+.taskHeader>div:last-child{
+    font-weight: bolder;
+    padding:0 3%;
+    cursor: pointer;
+    margin-left: -1px;
+    position: relative;
+}
+.taskHeader>div:last-child:hover .addTaskToolTip{
+    visibility: visible;
+}
+.toolTip{
+    visibility: hidden;
+    width: 7vw;
+    background-color: rgb(4, 63, 83);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    top: -2%;
+    left: 110%;
+}
+.toolTip::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent rgb(4, 63, 83) transparent transparent;
+  }
+#addTasks{
+    display: none;
+    position: relative;
+    border: 1px solid gray;
+    font-weight: bolder;
+    font-size: larger;
+    margin-top: -1px;
+    padding: 2% 0% 5%;
+    background-color: rgb(212, 232, 238);
+}
+#addTasks input,select{
+    margin-top: 2%;
+    height: 4vh;
+    font-size: 1.2vw;
+    text-indent: 2%;
+}
+#addTasks select:focus,#addTasks input:focus{
+    outline:1px solid rgb(12, 165, 226);
+    border: 1px solid rgb(12, 165, 226);
+}
+#addTasks>div:not(.date_time,.buttons){
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+}
+.date_time{
+    display: flex;
+}
+.date_time>div{
+    display: flex;
+    flex-direction: column;
+    margin: 2%;
+}
+.date_time input{
+    width:12vw;
+}
+.date_time>div:last-child{
+    margin-left: 1%;
+}
+.buttons{
+   display: flex;
+   justify-content: space-between;
+   margin: 5% 2%;
+}
+.buttons button{
+    font-size:1.2vw;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    margin-left: 3%;
+}
+.buttons>div{
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+}
+.buttons>div>button:first-child,.buttons>button:first-child{
+    background: none;
+}
+#deleteTask{
+    font-size: large;
+    visibility: hidden;
+}
+.buttons>div>button:last-child{
+    background-color: green;
+    color: white;
+    width: 50%;
+    height: 4vh;
+}
