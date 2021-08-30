@@ -2,8 +2,7 @@ import axios from 'axios';
 import { hardCoded } from './hardCodedValues';
 import { allTasks } from './allTasks';
 //updateTasks - for making api request for updating Tasks and dispatch allTask() action.
-export const updateTasks=(id,body)=>async(dispatch)=>{
-    console.log(id,body)
+export const updateTasks=(id,body,callBack)=>async(dispatch)=>{
     try{
         let options = {
             method: 'PUT',
@@ -15,9 +14,8 @@ export const updateTasks=(id,body)=>async(dispatch)=>{
             },
             data:body
         };
-        const userSavedTasks=await axios(options)
-        console.log(userSavedTasks)
-        dispatch(allTasks())
+        await axios(options)
+        dispatch(allTasks(callBack))
     }
     catch(err){
         console.log(err)

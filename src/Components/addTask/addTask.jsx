@@ -77,7 +77,6 @@ export default function AddTasks(){
         let task_time; //hold task time in seconds.
         let time_zone; //hold the time_zone in seconds.
         let is_completed; //0
-
         //defaultTaskValues.assigned_user==="" means addingTask else updatingTask.
         if(defaultTaskValues.assigned_user===""){
             task_time=time.value.split(':')
@@ -85,6 +84,14 @@ export default function AddTasks(){
             time_zone=Math.abs(new Date().getTimezoneOffset()*60)+task_time;
             is_completed=0
         }
+        //if time field get updated
+        else if(time.value!==time_seconds(defaultTaskValues.task_time)){
+            task_time=time.value.split(':')
+            task_time=Number(task_time[0]*3600)+Number(task_time[1]*60)
+            time_zone=Math.abs(new Date().getTimezoneOffset()*60)+task_time;
+            is_completed=defaultTaskValues.is_completed
+        }
+        //if time field not get updated
         else{
             task_time=defaultTaskValues.task_time;
             time_zone=defaultTaskValues.time_zone
@@ -104,10 +111,8 @@ export default function AddTasks(){
             dispatch(addTasks(task_body,hideAddTasks))
         }
         else{
-            dispatch(updateTasks(defaultTaskValues.id,task_body))
+            dispatch(updateTasks(defaultTaskValues.id,task_body,hideAddTasks))
         }
-        //hideAddTasks - after action performed move to allTask component.
-        hideAddTasks()
     }
     //removeTask - to delete the task.
     const removeTask=()=>{

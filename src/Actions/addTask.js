@@ -2,7 +2,7 @@ import axios from 'axios';
 import { hardCoded } from './hardCodedValues';
 import { allTasks } from './allTasks';
 //addTasks - make api request and dispatching allUser() action after adding/updating task.
-export const addTasks=(body)=>async(dispatch)=>{
+export const addTasks=(body,callBack)=>async(dispatch)=>{
     try{
         let options = {
             method: 'POST',
@@ -14,9 +14,8 @@ export const addTasks=(body)=>async(dispatch)=>{
             },
             data:body
         };
-        const userSavedTasks=await axios(options)
-        console.log(userSavedTasks)
-        dispatch(allTasks())
+        await axios(options)
+        dispatch(allTasks(callBack))
     }
     catch(err){
         console.log(err)

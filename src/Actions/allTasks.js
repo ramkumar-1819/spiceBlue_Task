@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { hardCoded } from './hardCodedValues';
 //allTasks - make api request and sort allTask dispatch allTasks.
-export const allTasks=()=>async(dispatch)=>{
+export const allTasks=(callBack)=>async(dispatch)=>{
     try{
         let options = {
             method: 'GET',
@@ -20,6 +20,10 @@ export const allTasks=()=>async(dispatch)=>{
         //sort all Task based on date and time.
         allTasks.sort((a,b)=>(new Date(a.task_date).getTime()+a.task_time*1000)-(new Date(b.task_date).getTime()+b.task_time*1000))
         dispatch({type:'allTasks',list:allTasks})
+        //callBack - hide form and show all task when update and add task performed
+        if(callBack!==undefined){
+            callBack()
+        }
     }
     catch(err){
         console.log(err)
