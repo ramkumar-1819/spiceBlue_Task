@@ -117,8 +117,7 @@ export default function AddTasks(){
     //removeTask - to delete the task.
     const removeTask=()=>{
         if(window.confirm('Are you sure to delete the task?')){
-            dispatch(deleteTasks(defaultTaskValues.id))
-            hideAddTasks()
+            dispatch(deleteTasks(defaultTaskValues.id,hideAddTasks))
         }        
     }
     return(

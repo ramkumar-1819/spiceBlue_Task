@@ -2,8 +2,7 @@ import axios from 'axios';
 import { hardCoded } from './hardCodedValues';
 import { allTasks } from './allTasks';
 //deleteTasks - making api request and dispatching allTask() action.
-export const deleteTasks=(id)=>async(dispatch)=>{
-    console.log(id)
+export const deleteTasks=(id,callBack)=>async(dispatch)=>{
     try{
         let options = {
             method: 'DELETE',
@@ -15,7 +14,7 @@ export const deleteTasks=(id)=>async(dispatch)=>{
             }
         };
         await axios(options)
-        dispatch(allTasks())
+        dispatch(allTasks(callBack))
     }
     catch(err){
         console.log(err)
