@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/spiceBlue_Task/static/css/main.04196fc4.chunk.css",
-    "main.js": "/spiceBlue_Task/static/js/main.6093f45f.chunk.js",
-    "main.js.map": "/spiceBlue_Task/static/js/main.6093f45f.chunk.js.map",
+    "main.js": "/spiceBlue_Task/static/js/main.af6bfedf.chunk.js",
+    "main.js.map": "/spiceBlue_Task/static/js/main.af6bfedf.chunk.js.map",
     "runtime-main.js": "/spiceBlue_Task/static/js/runtime-main.a76dea53.js",
     "runtime-main.js.map": "/spiceBlue_Task/static/js/runtime-main.a76dea53.js.map",
     "static/js/2.99d73dc8.chunk.js": "/spiceBlue_Task/static/js/2.99d73dc8.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.a76dea53.js",
     "static/js/2.99d73dc8.chunk.js",
     "static/css/main.04196fc4.chunk.css",
-    "static/js/main.6093f45f.chunk.js"
+    "static/js/main.af6bfedf.chunk.js"
   ]
 }
